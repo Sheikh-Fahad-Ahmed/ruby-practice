@@ -32,7 +32,7 @@
 # end
 # 
 
-i = 0
+# i = 0
 # loop do 
   
 #   puts "i = #{i}"
@@ -64,11 +64,46 @@ i = 0
 #   puts "Zombie #{i+1}"
 # end
 
-5.times do
-  puts "This runs 5 times"
+# 5.times do
+#   puts "This runs 5 times"
+# end
+
+# 5.times do |number| 
+#   puts "This is number #{number+1}"
+# end
+# 
+# arr = ["b", "a"]
+# arr = arr.product(Array(1..3))
+
+
+# p arr.first.delete(arr.first.last)
+# p arr
+
+# arr = [["test", "hello", "world"],["example", "mem"]]
+
+# puts arr.last.first
+# 
+#
+#
+
+
+top_five_games = ["mario brothers",
+                  "excite bike",
+                  "ring king",
+                  "castlevania",
+                  "double dragon"]
+
+top_five_games.each_with_index do |item, index|
+  puts "#{index + 1}. #{item}"
 end
 
-5.times do |number| 
-  puts "This is number #{number+1}"
+
+arr1 = [1,2,3,4,5]
+arr2 = []
+
+arr1.each do |item|
+  arr2 << item + 2
 end
 
+p arr1 
+p arr2
