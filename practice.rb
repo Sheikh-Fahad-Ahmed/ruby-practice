@@ -124,29 +124,41 @@
 
 # Write a program that prints a greeting message. This program should contain a method called greeting that takes a name as its parameter and returns a string.
 
-def greeting(name)
-  puts "Hello, #{name}"
-end
+# def greeting(name)
+#   puts "Hello, #{name}"
+# end
 
-greeting "fahad"
+# greeting "fahad"
 
 
-puts x = 2
+# puts x = 2
 
-p name = 'joe'
+# p name = 'joe'
 
 
 # Write a program that includes a method called multiply that takes two arguments and returns the product of the two numbers.
 
-def multiply(num1, num2) 
-  num1 * num2 
+# def multiply(num1, num2) 
+#   num1 * num2 
+# end
+
+# puts multiply(2,3)
+
+# def scream(words)
+#   words = words + "!!!!"
+#   puts words
+# end
+
+# scream("Yippeee")
+
+
+def isogram?(string)
+  original_length = string.length
+  string_array = string.downcase.split('')
+  p string_array
+  unique_length = string_array.uniq.length
+  puts unique_length
+  original_length == unique_length
 end
 
-puts multiply(2,3)
-
-def scream(words)
-  words = words + "!!!!"
-  puts words
-end
-
-scream("Yippeee")
+puts isogram?("Odin")
