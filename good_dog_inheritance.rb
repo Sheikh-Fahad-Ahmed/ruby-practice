@@ -9,31 +9,39 @@ module Walkable
   end
 end
 
-class Animal
-  attr_accessor :name
 
-  include Biteable
 
-  def initialize(name)
-    @name = name
+
+module Mammals
+  class Animal
+    attr_accessor :name
+  
+    include Biteable
+  
+    def initialize(name)
+      @name = name
+    end
   end
+
+  class GoodDog < Animal
+    include Walkable
+  
+    def initialize(name, age)
+      super(name)
+      @age = age
+    end
+  
+    def speak
+      "#{name} is #{@age} years old and  says woof!"
+    end
+  end  
 end
 
-class GoodDog < Animal
-  include Walkable
-
-  def initialize(name, age)
-    super(name)
-    @age = age
-  end
-
-  def speak
-    "#{name} is #{@age} years old and  says woof!"
-  end
-end
 
 
-sparky = GoodDog.new("Sparky", 19)
+
+
+sparky = Mammals::GoodDog.new("Sparky", 19)
 
 puts sparky.speak
 sparky.name = 'Spartacus'
@@ -43,4 +51,4 @@ puts sparky.walk
 puts sparky.bite
 
 puts "\nGoodDog method lookup"
-puts GoodDog.ancestors
+puts Mammals::GoodDog.ancestors
