@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    msgpack (1.7.2)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  msgpack (~> 1.7)
+
+BUNDLED WITH
+   2.5.18
